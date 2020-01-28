@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
   "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 1190,
-  "expoServerNgrokUrl": "https://6h-4xv.anonymous.mutime2.exp.direct",
-  "packagerNgrokUrl": "https://packager.6h-4xv.anonymous.mutime2.exp.direct",
-  "ngrokPid": 1206
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": "https://g2-bqq.anonymous.ynov-b3-dev-mobile-master.exp.direct",
+  "packagerNgrokUrl": "https://packager.g2-bqq.anonymous.ynov-b3-dev-mobile-master.exp.direct",
+  "ngrokPid": 49756
 }
