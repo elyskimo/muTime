@@ -14,7 +14,8 @@ export default class Weather extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={[styles.paragraph, styles.whiteColor]}>Miami, FL</Text>
+        
+        {/* <Text style={[styles.paragraph, styles.whiteColor]}>MuTime</Text>
         <TouchableOpacity
           onPress={() => this.props.navigation.navigate("Second")}
         >
@@ -37,7 +38,7 @@ export default class Weather extends React.Component {
           <InfoItem title="Visibility:" info="10.0" />
           <InfoItem title="Heat Index:" info="95 F (35C)" lastOne={true} />
         </View>
-        <StatusBar barStyle="light-content" />
+        <StatusBar barStyle="light-content" /> */}
       </View>
     );
   }
@@ -53,7 +54,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "blue",
+    backgroundColor: "#582454",
     padding: 8
   },
   paragraph: {
