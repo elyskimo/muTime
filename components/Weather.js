@@ -4,17 +4,32 @@ import {
   View,
   StyleSheet,
   StatusBar,
-  TouchableOpacity
+  TouchableOpacity,
+  Button,
 } from "react-native";
 import Constants from "expo-constants";
 import InfoItem from "./InfoItem";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import * as firebase from "firebase";
 
 export default class Weather extends React.Component {
+  constructor(props){
+    super(props);
+    this.logout = this.logout.bind(this);
+  }
+
+  logout(){
+    firebase.auth().signOut().then(() => {
+      console.log("User signed out");
+      this.props.navigation.navigate("Login");
+    }).catch((err) => {
+      console.log(err);
+    });    
+  }
   render() {
     return (
       <View style={styles.container}>
-        
+        <Button onPress={this.logout} title="Log out"/>
         {/* <Text style={[styles.paragraph, styles.whiteColor]}>MuTime</Text>
         <TouchableOpacity
           onPress={() => this.props.navigation.navigate("Second")}

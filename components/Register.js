@@ -9,34 +9,29 @@ import {
   Alert
 } from "react-native";
 import * as firebase from "firebase";
-// import Register from "./components/Register";
 
-export default class Login extends React.Component {
+export default class Register extends React.Component {
   constructor(props){
     super(props);
     this.state = {
       isSignup: false,
       email: "",
-      password: ""
+      password: "",
+      password2: ""
     };
   }
-  tryLogin(){
-    if (this.state.email.length === 0 || this.state.password.length === 0) {
-      Alert.alert("Fill both the inputs please");
+  tryRegister(){
+    if (this.state.email.length === 0 || this.state.password.length === 0 || this.state.password2.length === 0) {
+      Alert.alert("Fill all the inputs please");
     }
     firebase
       .auth()
-      .signInWithEmailAndPassword(this.state.email, this.state.password)
+      .createUserWithEmailAndPassword(this.state.email, this.state.password)
       .then(args => {
         console.log(args);
-        AsyncStorage.setItem("userId", args.user.uid);
-        this.props.navigation.navigate("TabNav");
+        this.props.navigation.navigate("Login");
       })
       .catch(error => Alert.alert("Error", error.message));
-  }
-
-  redirectToRegister(){
-    this.props.navigation.navigate("Register");
   }
 
   render(){
@@ -56,8 +51,14 @@ export default class Login extends React.Component {
           secureTextEntry
           style={{ paddingVertical: 16, marginVertical: 16, fontSize: 20 }}
         />
-        <Button onPress={this.tryLogin.bind(this)} title="Sign in!" />
-        <Button onClick={() => this.redirectToRegister.bind(this)} style={{marginLeft: '25px', marginTop: '50px'}} className="btn btn-success" title="Create account"></Button>
+        <TextInput
+          value={this.state.password2}
+          onChangeText={text => this.setState({ password: text })}
+          placeholder="Confirm password"
+          secureTextEntry
+          style={{ paddingVertical: 16, marginVertical: 16, fontSize: 20 }}
+        />
+        <Button onPress={this.tryRegister.bind(this)} title="Register!" />
       </View>
     );
   }

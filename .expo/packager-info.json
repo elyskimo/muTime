@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
   "expoServerPort": 19000,
-  "packagerPort": null,
-  "packagerPid": null,
-  "expoServerNgrokUrl": "https://g2-bqq.anonymous.ynov-b3-dev-mobile-master.exp.direct",
-  "packagerNgrokUrl": "https://packager.g2-bqq.anonymous.ynov-b3-dev-mobile-master.exp.direct",
-  "ngrokPid": 49756
+  "packagerPort": 19001,
+  "packagerPid": 14264,
+  "expoServerNgrokUrl": "https://kt-f7j.anonymous.ynov-b3-dev-mobile-master.exp.direct",
+  "packagerNgrokUrl": "https://packager.kt-f7j.anonymous.ynov-b3-dev-mobile-master.exp.direct",
+  "ngrokPid": 19504
 }

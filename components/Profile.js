@@ -1,7 +1,8 @@
 import React from 'react';
-import { SafeAreaView, View, FlatList, StyleSheet, Text, ImageBackground } from 'react-native';
+import { SafeAreaView, View, FlatList, StyleSheet, Text, ImageBackground, Button } from 'react-native';
 import Constants from 'expo-constants';
 import { Assets } from 'react-navigation-stack';
+import * as firebase from "firebase";
 
 const DATA = [
   {
@@ -21,6 +22,10 @@ function Item({ title }) {
     </View>
   );
 }
+
+// function logout(){
+//   firebase.auth().signOut();
+// }
 
 export default function App() {
   return (

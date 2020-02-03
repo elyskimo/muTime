@@ -11,6 +11,7 @@ import Profile from "./components/Profile";
 import Modal from "./components/Modal";
 import List from "./components/List";
 import Login from "./components/Login";
+import Register from "./components/Register";
 import Loading from "./components/Loading";
 import * as firebase from "firebase";
 
@@ -25,7 +26,12 @@ const firebaseConfig = {
   measurementId: "G-4Z40VCFQEV"
 };
 
-firebase.initializeApp(firebaseConfig);
+try{
+  firebase.initializeApp(firebaseConfig);
+}catch(err){
+  console.error('Firebase intialization error', err.stack);
+}
+
 
 const StackNav = createStackNavigator({
   Weather: {
@@ -90,6 +96,7 @@ const TabNav = createBottomTabNavigator({
 
 const SwitchNav = createSwitchNavigator({
   Loading,
+  Register,
   Login,
   TabNav
 });

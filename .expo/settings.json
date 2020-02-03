@@ -1,8 +1,8 @@
 {
+  "urlRandomness": "kt-f7j",
   "hostType": "tunnel",
   "lanType": "ip",
   "dev": true,
   "minify": false,
-  "urlRandomness": "g2-bqq",
   "https": false
 }
